@@ -22,6 +22,27 @@ public class IniciJoc {
 	 * 	4.4: mostrar l'estat del taulell després de l'acció*/
 	private IniciJoc() {
 		//PENDENT IMPLEMENTAR
+		console = new JConsole (100,30);
+		this.joc = new JocCercarMines();
+		String entrada = "";
+		String resultat = "";
+		console.println("Comença el joc");
+		while(!joc.esFiJoc() && !entrada.equals("-1"))
+		{
+			veureTaulell();
+			entrada = console.readString();
+			resultat = validarExecutarEntrada(entrada);
+			console.clear();
+			console.println(resultat);
+
+		}
+		veureTaulell();
+		
+		console.println("\nJoc finalitzat");
+		console.setCursorPosition(0, console.getRows()-1);
+		console.print("Apreta qualsevol tecla per sortir...");
+		console.readKey(true);
+		System.exit(0);
 	}
 	
 	/* Validar l'entrada que ha fet el jugador:
@@ -35,7 +56,40 @@ public class IniciJoc {
 	 * 5: Fer que el joc realitzi l'acció i retornar el resultat de l'executar-la.*/
 	private String validarExecutarEntrada(String entrada) {
 		//PENDENT IMPLEMENTAR
-		return null;
+		String[] ordres = new String[3];
+		if(!entrada.equals("-1"))
+		{
+			ordres = entrada.split(",");
+			if(this.isNumeric(ordres[0]) && this.isNumeric(ordres[1]))
+			{
+				if(ordres[2].equals("d"))
+				{
+					return joc.destaparCasella(Integer.parseInt(ordres[0])-1, Integer.parseInt(ordres[1])-1);
+					
+				}else if (ordres[2].equals("m"))
+				{
+					return joc.marcarMina(Integer.parseInt(ordres[0])-1, Integer.parseInt(ordres[1])-1);
+					
+				}
+				else if (ordres[2].equals("e"))
+				{
+					return joc.desmarcarMina(Integer.parseInt(ordres[0])-1, Integer.parseInt(ordres[1])-1);
+				}
+				else
+				{
+					return "Caràcter incorrecte, ha de ser d, m o e";
+				}
+			}
+			else
+			{
+				return "Entrada incorrecta, les coordenades han de correspondre a una fila i una columna del taulell";
+			}
+		}
+		else
+		{
+			return "";
+		}
+		
 	}
 	
 	//Retorna cert si la cadena és un enter i fals altrament
