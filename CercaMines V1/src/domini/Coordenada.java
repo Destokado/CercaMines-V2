@@ -23,11 +23,13 @@ public class Coordenada {//cada objecta representarà una coordenada del taulell
 		return this.columna;
 	}
 	
-	/*Una casella depenent la seva situació en el taulell, pot tenir 2, 5 o 8 veins.
+	/*Una casella depenent la seva situació en el taulell, pot tenir 3, 5 o 8 veins.
 	 * Aquest mètode retorna en un array les coordenades  veines a l'objecte actual.
 	 * Cal tenir en compte que una coordenada no és veina de si mateixa.*/
 	public Coordenada [] cercarCoordenadesVeines() {
 		//PENDENT IMPLEMENTAR
+		
+		//EL nombre de veins marca la dimensió de l'array.
 		int[][] veines;
 		int casella = 0;
 		int veins = 0;
