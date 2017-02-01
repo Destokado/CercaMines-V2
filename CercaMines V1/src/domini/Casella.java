@@ -46,26 +46,20 @@ public class Casella {
 	//Retorna cert si la casella té una mina, i fals altrament
 	public boolean hiHaMina() {
 		//PENDENT IMPLEMENTAR
-		if(taulell[fila][columna] == MINA)
-		{
-			return true;
+		return (MINA==-1);
 		}
-		else
-		{
-		return false;
-		}
-	}
+	
 	
 	//Retorna el contingut de la casella
 	public int getContingut() {
 		//PENDENT IMPLEMENTAR
-		return -100;
+		return this.contingut;
 	}
 
 	//Retrona cert si la casella està destapada, fals altrament
 	public boolean estaDestapada() {
 		//PENDENT IMPLEMENTAR
-		return false;
+		return this.destapada;
 	}
 
 	//Destapa la casella
@@ -81,7 +75,7 @@ public class Casella {
 	//Retorna si la casella està o no marcada
 	public boolean estaMarcadaPosibleMina() {
 		//PENDENT IMPLEMENTAR
-		return false;
+		return this.possibleMina;
 	}
 	
 	//Retorna les coordenades de la casella
@@ -94,6 +88,6 @@ public class Casella {
 	 * ni ella conté una mina, altrament retorna fals.*/
 	public boolean esBuida() {
 		//PENDENT IMPLEMENTAR
-		return false;
+		return (POS_BUIDA==0&&MINA!=-1);
 	}
 }
