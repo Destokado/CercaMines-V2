@@ -32,12 +32,28 @@ public class Casella {
 	 * Caldrà doncs incrementar el nombre de veins amb mina de cada vei.*/
 	private void modificarVeinsNovaMina(Casella[] veins) {			
 		//PENDENT IMPLEMENTAR
+		int[][] veines = cercarCasellesVeines(posFila, posColumna);
+		for(int i = 0; i < veines.length; i++)
+		{
+			if(taulell[veines[i][0]][veines[i][1]] != MINA)
+			{
+				taulell[veines[i][0]][veines[i][1]] ++;
+			}
+			
+		}
 	}		
 	
 	//Retorna cert si la casella té una mina, i fals altrament
 	public boolean hiHaMina() {
 		//PENDENT IMPLEMENTAR
+		if(taulell[fila][columna] == MINA)
+		{
+			return true;
+		}
+		else
+		{
 		return false;
+		}
 	}
 	
 	//Retorna el contingut de la casella
