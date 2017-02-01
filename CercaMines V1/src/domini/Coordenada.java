@@ -7,16 +7,20 @@ public class Coordenada {//cada objecta representarà una coordenada del taulell
 
 	public Coordenada(int fila, int columna) {
 		//PENDENT IMPLEMENTAR
+		this.fila = fila;
+		this.columna = columna;
 	}
 
 	public int getFila() {
 		//PENDENT IMPLEMENTAR
-		return -1000;
+		
+		
+		return this.fila;
 	}
 
 	public int getColumna() {
 		//PENDENT IMPLEMENTAR
-		return -1000;
+		return this.columna;
 	}
 	
 	/*Una casella depenent la seva situació en el taulell, pot tenir 2, 5 o 8 veins.
