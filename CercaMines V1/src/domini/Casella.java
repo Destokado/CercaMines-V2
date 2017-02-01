@@ -25,6 +25,7 @@ public class Casella {
 	 * per tal d'actualitzar tots els seus veins*/
 	public void collocarMina(Casella[] casellesVeines) {
 		//PENDENT IMPLEMENTAR
+		this.contingut = -1;
 	}
 	
 	/*Cada cop que es col·loca una mina en una casella, cal informar 
@@ -45,20 +46,20 @@ public class Casella {
 	
 	//Retorna cert si la casella té una mina, i fals altrament
 	public boolean hiHaMina() {
-		//PENDENT IMPLEMENTAR
+		
 		return (MINA==-1);
 		}
 	
 	
 	//Retorna el contingut de la casella
 	public int getContingut() {
-		//PENDENT IMPLEMENTAR
+		
 		return this.contingut;
 	}
 
 	//Retrona cert si la casella està destapada, fals altrament
 	public boolean estaDestapada() {
-		//PENDENT IMPLEMENTAR
+		
 		return this.destapada;
 	}
 
@@ -74,20 +75,20 @@ public class Casella {
 	
 	//Retorna si la casella està o no marcada
 	public boolean estaMarcadaPosibleMina() {
-		//PENDENT IMPLEMENTAR
+		
 		return this.possibleMina;
 	}
 	
 	//Retorna les coordenades de la casella
 	public Coordenada getPosicio() {
-		//PENDENT IMPLEMENTAR
-		return null;
+		
+		return this.posicio;
 	}
 
 	/*Retorna cert si la casella no té cap vei amb mina 
 	 * ni ella conté una mina, altrament retorna fals.*/
 	public boolean esBuida() {
-		//PENDENT IMPLEMENTAR
+		
 		return (POS_BUIDA==0&&MINA!=-1);
 	}
 }
