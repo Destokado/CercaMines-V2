@@ -62,14 +62,14 @@ public class TaulellCercaMines {
 
 	/*Retorna el número de files del taulell*/
 	public static int getFiles() {
-		//PENDENT IMPLEMENTAR
-		return -100;
+		
+		return MAX_FILES;
 	}
 
 	/*Retorna el número de columnes del taulell*/
 	public static int getColumnes() {
-		//PENDENT IMPLEMENTAR
-		return -100;
+		
+		return MAX_COLUMNES;
 	}
 
 	/*Retorna el taulell en una matriu de String*/
