@@ -18,8 +18,13 @@ public class Casella {
 
 	public Casella(Coordenada coordenada) {
 		//PENDENT IMPLEMENTAR
-	}
+	this.contingut = POS_BUIDA;
+	this.destapada = false;
+	this.posicio = coordenada;
+	this.possibleMina = false;
 	
+	}
+
 	/* actualitza l'atribut contingut possant'hi una mina
 	 * i crida el mètode modificarVeinsNovaMina() 
 	 * per tal d'actualitzar tots els seus veins*/
@@ -33,7 +38,10 @@ public class Casella {
 	 * Caldrà doncs incrementar el nombre de veins amb mina de cada vei.*/
 	private void modificarVeinsNovaMina(Casella[] veins) {			
 		//PENDENT IMPLEMENTAR
-		int[][] veines = cercarCasellesVeines(posFila, posColumna);
+		Casella[] veins = new Coordenada.CercarCoordenadesVeines();
+		
+		
+		/*int[][] veines = cercarCasellesVeines(posFila, posColumna);
 		for(int i = 0; i < veines.length; i++)
 		{
 			if(taulell[veines[i][0]][veines[i][1]] != MINA)
@@ -41,7 +49,7 @@ public class Casella {
 				taulell[veines[i][0]][veines[i][1]] ++;
 			}
 			
-		}
+		}*/
 	}		
 	
 	//Retorna cert si la casella té una mina, i fals altrament
